@@ -1,0 +1,5 @@
+name: lint-clang
+description: An action that uses clang-format to lint code
+runs:
+  using: docker
+  image: Dockerfile
