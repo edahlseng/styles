@@ -1,0 +1,5 @@
+name: lint-commit
+description: An action that uses commitlint to lint commit messages
+runs:
+  using: docker
+  image: Dockerfile
