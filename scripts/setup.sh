@@ -84,12 +84,15 @@ function linkConfigurationFile() {
 echo ""
 echo "Available linting tools:"
 echo ""
-lintingTools=("clang-format (C/C++/...)" "(quit)")
+lintingTools=("clang-format (C/C++/...)" "commitlint (Git commits)" "(quit)")
 PS3=$'\nWhich linting tool would you like to setup (select only one at a time)? '
 select tool in "${lintingTools[@]}"; do
 	case "${tool}" in
 		"clang-format (C/C++/...)")
 			linkConfigurationFile ".clang-format"
+			;;
+		"commitlint (Git commits)")
+			linkConfigurationFile ".commitlintrc.json"
 			;;
 		"(quit)")
 			break
